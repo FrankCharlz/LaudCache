@@ -1,7 +1,8 @@
 <!-- Directory.Build.props -->
 <Project>
     <PropertyGroup>
-        <Version>0.0.1</Version>
+        <PackageId>LaudCache</PackageId>
+        <Version>0.0.2</Version>
         <AssemblyVersion>$(Version)</AssemblyVersion>
         <FileVersion>$(Version)</FileVersion>
         <InformationalVersion>$(Version)</InformationalVersion>

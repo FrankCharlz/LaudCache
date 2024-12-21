@@ -1,0 +1,9 @@
+<!-- Directory.Build.props -->
+<Project>
+    <PropertyGroup>
+        <Version>0.0.1</Version>
+        <AssemblyVersion>$(Version)</AssemblyVersion>
+        <FileVersion>$(Version)</FileVersion>
+        <InformationalVersion>$(Version)</InformationalVersion>
+    </PropertyGroup>
+</Project>

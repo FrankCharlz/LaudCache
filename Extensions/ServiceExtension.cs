@@ -5,8 +5,14 @@ namespace LaudCache.Extensions;
 
 public static class ServiceExtension
 {
-    public static void AddRedis(this IServiceCollection services, string host, int port = 6379,
-        int defaultDatabase = 0, bool ssl = false, string instanceName = "")
+    public static void AddRedis(
+        this IServiceCollection services,
+        string host,
+        int port = 6379,
+        int defaultDatabase = 0,
+        bool ssl = false,
+        string instanceName = ""
+    )
     {
         var redisConfigurations = new ConfigurationOptions
         {

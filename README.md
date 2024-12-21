@@ -1,2 +1,3 @@
-LaudCache
--- integration with Redis and EntityFrameworkCore
+**LaudCache**
+
+Integration with Redis and EntityFrameworkCore

@@ -19,7 +19,7 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0"/>
         <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="8.0.0"/>
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0"/>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.0"/>
+        <PackageReference Include="Newtonsoft.Json" Version="8.0.1"/>
         <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.0"/>
     </ItemGroup>
 
@@ -27,7 +27,7 @@
         <!-- Define minimum version requirements -->
         <EFCoreMinVersion>8.0.0</EFCoreMinVersion>
         <ExtensionsMinVersion>8.0.0</ExtensionsMinVersion>
-        <NewtonsoftMinVersion>13.0.0</NewtonsoftMinVersion>
+        <NewtonsoftMinVersion>8.0.1</NewtonsoftMinVersion>
 
         <!-- Package versioning -->
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -38,7 +38,7 @@
         <!-- Define dependency version ranges -->
         <EFCoreDependency>[$(EFCoreMinVersion),9.0.0)</EFCoreDependency>
         <ExtensionsDependency>[$(ExtensionsMinVersion),9.0.0)</ExtensionsDependency>
-        <NewtonsoftDependency>[$(NewtonsoftMinVersion),14.0.0)</NewtonsoftDependency>
+        <NewtonsoftDependency>[$(NewtonsoftMinVersion),13.0.3)</NewtonsoftDependency>
     </PropertyGroup>
 
     <ItemGroup>

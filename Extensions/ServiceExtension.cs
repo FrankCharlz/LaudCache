@@ -30,4 +30,29 @@ public static class ServiceExtension
             options.InstanceName = instanceName;
         });
     }
+    
+    public static void AddRedis(
+        this IServiceCollection services,
+        string address,
+        int defaultDatabase = 0,
+        bool ssl = false,
+        string instanceName = ""
+    )
+    {
+        var redisConfigurations = new ConfigurationOptions
+        {
+            DefaultDatabase = defaultDatabase,
+            EndPoints =
+            {
+                address,
+            },
+            Ssl = ssl
+        };
+
+        services.AddStackExchangeRedisCache(options =>
+        {
+            options.ConfigurationOptions = redisConfigurations;
+            options.InstanceName = instanceName;
+        });
+    }
 }

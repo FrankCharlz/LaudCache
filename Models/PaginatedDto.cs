@@ -2,4 +2,4 @@
 
 
 
-public record PaginatedDto<T>(int count, List<T> items);
+public record PagedResult<T>(int count, List<T> items);

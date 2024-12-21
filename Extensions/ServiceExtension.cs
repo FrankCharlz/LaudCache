@@ -14,21 +14,7 @@ public static class ServiceExtension
         string instanceName = ""
     )
     {
-        var redisConfigurations = new ConfigurationOptions
-        {
-            DefaultDatabase = defaultDatabase,
-            EndPoints =
-            {
-                $"{host}:{port}",
-            },
-            Ssl = ssl
-        };
-
-        services.AddStackExchangeRedisCache(options =>
-        {
-            options.ConfigurationOptions = redisConfigurations;
-            options.InstanceName = instanceName;
-        });
+        AddRedis(services, $"{host}:{port}", defaultDatabase, ssl, instanceName);
     }
     
     public static void AddRedis(
@@ -49,6 +35,7 @@ public static class ServiceExtension
             Ssl = ssl
         };
 
+        services.AddSingleton<Cache.LaudCache>();
         services.AddStackExchangeRedisCache(options =>
         {
             options.ConfigurationOptions = redisConfigurations;

@@ -47,17 +47,17 @@ public static class CachedQueryableExtensions
     }
 
 
-    public static async Task<PaginatedDto<T>> ToListPaginatedAsync<T>(
+    public static async Task<PagedResult<T>> ToListPaginatedAsync<T>(
         this CachedQueryable<T> query,
         int pageNo,
         int pageSize,
         CancellationToken cancellationToken = default
     )
     {
-        var data = query.Cache.Get<PaginatedDto<T>>(query.CacheKey);
+        var data = query.Cache.Get<PagedResult<T>>(query.CacheKey);
         if (data != null) return data;
 
-        data = new PaginatedDto<T>
+        data = new PagedResult<T>
         (
             count: await query.CountAsync(cancellationToken),
             items: await query
@@ -70,4 +70,8 @@ public static class CachedQueryableExtensions
 
         return data;
     }
+    
+    
+    
+
 }

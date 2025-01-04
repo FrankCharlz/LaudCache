@@ -1,4 +1,4 @@
-# publish.ps1
+
 
 # Function to read XML properties
 function Get-XmlProperty {
@@ -37,4 +37,5 @@ dotnet pack --configuration Release
 
 # Push to NuGet feed
 $package = "$packageId.$version.nupkg"
+# dotnet nuget push "bin/Release/$package" -s http://192.168.200.70:30011/v3/index.json
 dotnet nuget push "bin/Release/$package" -s http://mecmis:30011/v3/index.json

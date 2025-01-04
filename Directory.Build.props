@@ -2,7 +2,7 @@
 <Project>
     <PropertyGroup>
         <PackageId>LaudCache</PackageId>
-        <Version>0.0.4</Version>
+        <Version>0.0.5</Version>
         <AssemblyVersion>$(Version)</AssemblyVersion>
         <FileVersion>$(Version)</FileVersion>
         <InformationalVersion>$(Version)</InformationalVersion>

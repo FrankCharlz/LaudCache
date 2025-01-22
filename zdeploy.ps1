@@ -38,5 +38,4 @@ dotnet pack --configuration Release
 # Push to NuGet feed
 $package = "$packageId.$version.nupkg"
 
-
 nuget push -Source http://192.168.200.70:30011/v3/index.json "bin/Release/$package" 

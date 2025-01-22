@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Primitives;
 using Newtonsoft.Json;
 
-namespace LaudCache.Cache;
+namespace LaudCache.Src;
 
 public class CacheItem
 {

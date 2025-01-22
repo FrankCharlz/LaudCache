@@ -1,4 +1,4 @@
-namespace LaudCache.Cache;
+namespace LaudCache.Src;
 
 public interface ILaudCache
 {

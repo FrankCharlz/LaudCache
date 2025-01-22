@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using Microsoft.Extensions.Caching.Distributed;
 
-namespace LaudCache.Cache;
+namespace LaudCache.Src;
 
 public class CacheKeys
 {

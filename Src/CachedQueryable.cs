@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Linq.Expressions;
 
-namespace LaudCache.Cache;
+namespace LaudCache.Src;
 
 public class CachedQueryable<T> : IQueryable<T>, IAsyncEnumerable<T>
 {

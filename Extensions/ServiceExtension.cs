@@ -35,7 +35,7 @@ public static class ServiceExtension
             Ssl = ssl
         };
 
-        services.AddSingleton<Cache.LaudCache>();
+        services.AddSingleton<Cache>();
         services.AddStackExchangeRedisCache(options =>
         {
             options.ConfigurationOptions = redisConfigurations;

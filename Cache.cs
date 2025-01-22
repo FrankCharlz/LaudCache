@@ -1,17 +1,18 @@
-﻿using Microsoft.Extensions.Caching.Distributed;
+﻿using LaudCache.Src;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace LaudCache.Cache;
+namespace LaudCache;
 
-public class LaudCache: ILaudCache
+public class Cache: ILaudCache
 {
     private readonly IDistributedCache _cache;
-    private readonly ILogger<LaudCache> _logger;
+    private readonly ILogger<Cache> _logger;
     private readonly JsonSerializerSettings _serializerSettings;
 
-    public LaudCache(IDistributedCache cache, ILogger<LaudCache> logger)
+    public Cache(IDistributedCache cache, ILogger<Cache> logger)
     {
         _cache = cache;
         _logger = logger;

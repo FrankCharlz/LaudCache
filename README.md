@@ -1,10 +1,10 @@
 # LaudCache
 
-### A REDIS cache library that integrates with beautifully EntityFrameworkCore
+## A Redis caching layer designed for seamless EntityFrameworkCore integration and more
 
-## Usage:
+### Usage:
 
-> - Startup.cs
+> - Setup (Startup.cs)
 
 ```
 
@@ -34,7 +34,7 @@ public class Startup
 }
 ```
 
-> - WorkerService.cs (dependency injection)
+> - Dependency injection (WorkerService.cs)
 
 ```
 
@@ -58,7 +58,7 @@ public class WorkerService
 
 ```
 
-> - WorkerService.cs (actual usage)
+> - Actual usage (WorkerService.cs)
 
 ```
 
@@ -102,7 +102,7 @@ public class WorkerService
         if (data0 != null) return Ok(data0);
 
         var card = await _membershipContext
-            .IssuedCards
+            .Cards
             .Where(m => m.CardNo == username)
             .FirstOrDefaultAsync();
 

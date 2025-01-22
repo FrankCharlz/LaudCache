@@ -37,5 +37,6 @@ dotnet pack --configuration Release
 
 # Push to NuGet feed
 $package = "$packageId.$version.nupkg"
-# dotnet nuget push "bin/Release/$package" -s http://192.168.200.70:30011/v3/index.json
-dotnet nuget push "bin/Release/$package" -s http://mecmis.nhif.or.tz:30011/v3/index.json
+
+
+nuget push -Source http://192.168.200.70:30011/v3/index.json "bin/Release/$package" 
